@@ -19,9 +19,9 @@ int main() {
         cout << "Помилка з'єднання: " << WSAGetLastError() << endl;
         return 1;
     }
-    ifstream file("text.rtf", ios::binary);
+    ifstream file("text.bat", ios::binary);
     if (!file) {
-        cout << "Не вдалося відкрити файл\n";
+        cout << "Не вдалося відкрити text.bat\n";
         return 1;
     }
     /* Суцільно файл
@@ -43,7 +43,7 @@ int main() {
             cout << "Відправлено: " << bytes << " байт\n";
         }
     }
-    cout << "Файл відправлено\n";
+    cout << "Файл text.bat відправлено\n";
     file.close();
     closesocket(clientSocket);
     WSACleanup();
